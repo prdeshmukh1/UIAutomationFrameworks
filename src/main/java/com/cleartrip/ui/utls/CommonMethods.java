@@ -19,7 +19,7 @@ import env.DriverUtil;
 public final class CommonMethods {
 
 	public void waitForElementToAppear(WebDriver driver, String loc) {
-		Wait<WebDriver> wait = new WebDriverWait(driver, 15);
+		Wait<WebDriver> wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(loc)));
 
 	}
@@ -32,7 +32,7 @@ public final class CommonMethods {
 
 	public WebElement waitUntillElementPresent(final WebElement element) {
 		@SuppressWarnings("deprecation")
-		Wait<WebDriver> wait = new FluentWait<WebDriver>(DriverUtil.getDriver()).withTimeout(20, TimeUnit.SECONDS)
+		Wait<WebDriver> wait = new FluentWait<WebDriver>(DriverUtil.getDriver()).withTimeout(30, TimeUnit.SECONDS)
 				.pollingEvery(1, TimeUnit.SECONDS).ignoring(NoSuchElementException.class);
 
 		return wait.until(new Function<WebDriver, WebElement>() {
@@ -53,7 +53,7 @@ public final class CommonMethods {
 
 	public boolean isAlertPresent() {
 		boolean foundAlert = false;
-		WebDriverWait wait = new WebDriverWait(DriverUtil.getDriver(), 10 /* timeout in seconds */);
+		WebDriverWait wait = new WebDriverWait(DriverUtil.getDriver(), 20 /* timeout in seconds */);
 		try {
 			wait.until(ExpectedConditions.alertIsPresent());
 			foundAlert = true;

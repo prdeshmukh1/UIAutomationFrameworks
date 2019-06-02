@@ -15,7 +15,5 @@ public class FlightSearchResultsPageLocators {
 	@FindBy(how=How.XPATH,using="(//*[@type='submit' and text()='Book'])[2]")
 	public WebElement SearchResults_BookTicket;
 	
-	
-	
 
 }

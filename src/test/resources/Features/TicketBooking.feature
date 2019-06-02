@@ -21,6 +21,6 @@ Scenario Outline: Validate ticketBooking
 	
 	Examples: 
 		|  From    			|  To   			 |Departure 	|ReturnDate  |adults|childs|specific|depart|retur|
-		| "Pune, IN - Lohegaon (PNQ)"     	| "Bangalore, IN - Kempegowda International Airport (BLR)"        |"01/08/2019"  |"12/08/2019"|"2"   |"2"   |2       |2     |2    |
+		| "Pune, IN - Lohegaon (PNQ)"     	| "Bangalore, IN - Kempegowda International Airport (BLR)"        |"01/07/2019"  |"12/07/2019"|"2"   |"2"   |2       |2     |2    |
 		
     

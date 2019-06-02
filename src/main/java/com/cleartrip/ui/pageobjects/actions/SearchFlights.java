@@ -93,7 +93,7 @@ public class SearchFlights {
 
 	public void selectTheFirstAvailableAutoCompleteOptionFromSource() throws InterruptedException {
 		@SuppressWarnings("deprecation")
-		Wait<WebDriver> wait = new FluentWait<WebDriver>(DriverUtil.getDriver()).withTimeout(20, TimeUnit.SECONDS)
+		Wait<WebDriver> wait = new FluentWait<WebDriver>(DriverUtil.getDriver()).withTimeout(30, TimeUnit.SECONDS)
 				.pollingEvery(1, TimeUnit.SECONDS).ignoring(NoSuchElementException.class);
 
 		WebElement optionListElement = wait.until(new Function<WebDriver, WebElement>() {
@@ -109,7 +109,7 @@ public class SearchFlights {
 
 	public void selectTheFirstAvailableAutoCompleteOptionFromDestination() {
 		@SuppressWarnings("deprecation")
-		Wait<WebDriver> wait = new FluentWait<WebDriver>(DriverUtil.getDriver()).withTimeout(20, TimeUnit.SECONDS)
+		Wait<WebDriver> wait = new FluentWait<WebDriver>(DriverUtil.getDriver()).withTimeout(30, TimeUnit.SECONDS)
 				.pollingEvery(1, TimeUnit.SECONDS).ignoring(NoSuchElementException.class);
 
 		WebElement optionListElement = wait.until(new Function<WebDriver, WebElement>() {

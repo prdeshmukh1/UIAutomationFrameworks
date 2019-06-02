@@ -17,7 +17,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class DriverUtil {
-	public static long DEFAULT_WAIT = 15;
+	public static long DEFAULT_WAIT = 20;
 	protected static WebDriver driver;
 
 //Returns the Webdriver 
