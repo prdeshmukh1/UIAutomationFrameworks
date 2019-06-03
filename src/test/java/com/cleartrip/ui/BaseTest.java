@@ -2,7 +2,7 @@ package com.cleartrip.ui;
 
 import org.openqa.selenium.WebDriver;
 
-import env.DriverUtil;
+import com.cleartrip.ui.utls.DriverUtil;
 
 public class BaseTest 
 {

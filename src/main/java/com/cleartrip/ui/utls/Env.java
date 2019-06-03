@@ -1,4 +1,4 @@
-package env;
+package com.cleartrip.ui.utls;
 
 import java.io.FileInputStream;
 import java.io.InputStream;

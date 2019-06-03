@@ -13,9 +13,8 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 
 import com.cleartrip.ui.pageobjects.locators.SearchFlightsLocators;
+import com.cleartrip.ui.utls.DriverUtil;
 import com.google.common.base.Function;
-
-import env.DriverUtil;
 
 public class SearchFlights {
 

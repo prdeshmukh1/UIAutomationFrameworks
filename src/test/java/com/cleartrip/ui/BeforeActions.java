@@ -1,7 +1,8 @@
 package com.cleartrip.ui;
 
+import com.cleartrip.ui.utls.DriverUtil;
+
 import cucumber.api.java.Before;
-import env.DriverUtil;
 
 public class BeforeActions {
 

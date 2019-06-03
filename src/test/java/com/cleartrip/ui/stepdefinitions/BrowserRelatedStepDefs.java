@@ -1,7 +1,8 @@
 package com.cleartrip.ui.stepdefinitions;
 
+import com.cleartrip.ui.utls.DriverUtil;
+
 import cucumber.api.java.en.Then;
-import env.DriverUtil;
 
 public class BrowserRelatedStepDefs {
 

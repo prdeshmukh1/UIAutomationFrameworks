@@ -3,10 +3,10 @@ package com.cleartrip.ui.stepdefinitions;
 import com.cleartrip.ui.BaseTest;
 import com.cleartrip.ui.pageobjects.actions.SearchFlights;
 import com.cleartrip.ui.utls.CommonMethods;
+import com.cleartrip.ui.utls.DriverUtil;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
-import env.DriverUtil;
 
 public class SearchFlightsStepDefs extends BaseTest {
 	SearchFlights searchflights = new SearchFlights();

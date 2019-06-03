@@ -13,8 +13,6 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import env.DriverUtil;
-
 // Making it final class, so that other class should not extend from it.
 public final class CommonMethods {
 

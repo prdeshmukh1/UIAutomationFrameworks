@@ -4,9 +4,10 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
+import com.cleartrip.ui.utls.DriverUtil;
+
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
-import env.DriverUtil;
 
 public class AfterActions {
 

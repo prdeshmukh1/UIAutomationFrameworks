@@ -9,8 +9,8 @@ import org.openqa.selenium.support.PageFactory;
 
 
 import com.cleartrip.ui.pageobjects.locators.FlightSearchResultsPageLocators;
+import com.cleartrip.ui.utls.DriverUtil;
 
-import env.DriverUtil;
 import gherkin.formatter.Reporter;
 
 public class SearchFlightsResults {
