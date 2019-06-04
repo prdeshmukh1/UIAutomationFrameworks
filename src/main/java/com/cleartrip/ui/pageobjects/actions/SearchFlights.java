@@ -18,10 +18,11 @@ import com.google.common.base.Function;
 
 public class SearchFlights {
 
-	SearchFlightsLocators searchFlightsLocators = null;
+	SearchFlightsLocators searchFlightsLocators;
 
 	public SearchFlights() {
-		searchFlightsLocators = new SearchFlightsLocators();
+//		System.out.println("Inside Constructor SearchFlights() ");
+		this.searchFlightsLocators = new SearchFlightsLocators();
 		PageFactory.initElements(DriverUtil.getDriver(), searchFlightsLocators);
 	}
 
@@ -57,9 +58,11 @@ public class SearchFlights {
 	public void enterReturnDateAs(String date) {
 		searchFlightsLocators.searchPage_ReturnDate.clear();
 		searchFlightsLocators.searchPage_ReturnDate.sendKeys(date);
-		DriverUtil.getDriver()
-				.findElement(By.xpath("//*[@class='monthBlock last']//a[text()='" + date.split("/")[0] + "'] "))
-				.click();
+		DriverUtil
+				.getDriver()
+				.findElement(
+						By.xpath("//*[@class='monthBlock last']//a[text()='"
+								+ date.split("/")[0] + "'] ")).click();
 	}
 
 	public void selectNumberOfAdults(String adults) {
@@ -79,47 +82,59 @@ public class SearchFlights {
 	}
 
 	public void clickDepartFlightPriceInDesc() {
-		List<WebElement> elements = DriverUtil.getDriver().findElements(By.xpath("//a[text()='Price']"));
+		List<WebElement> elements = DriverUtil.getDriver().findElements(
+				By.xpath("//a[text()='Price']"));
 		System.err.println("count:" + elements.size());
 		System.err.println(elements.get(0).getAttribute("class"));
 		System.err.println(elements.get(1).getAttribute("class"));
-		if (elements.get(0).getAttribute("class").equalsIgnoreCase("current sortAsc"))
+		if (elements.get(0).getAttribute("class")
+				.equalsIgnoreCase("current sortAsc"))
 			elements.get(0).click();
-		if (elements.get(1).getAttribute("class").equalsIgnoreCase("current sortAsc"))
+		if (elements.get(1).getAttribute("class")
+				.equalsIgnoreCase("current sortAsc"))
 			elements.get(1).click();
 
 	}
 
-	public void selectTheFirstAvailableAutoCompleteOptionFromSource() throws InterruptedException {
+	public void selectTheFirstAvailableAutoCompleteOptionFromSource()
+			throws InterruptedException {
 		@SuppressWarnings("deprecation")
-		Wait<WebDriver> wait = new FluentWait<WebDriver>(DriverUtil.getDriver()).withTimeout(30, TimeUnit.SECONDS)
-				.pollingEvery(1, TimeUnit.SECONDS).ignoring(NoSuchElementException.class);
+		Wait<WebDriver> wait = new FluentWait<WebDriver>(DriverUtil.getDriver())
+				.withTimeout(30, TimeUnit.SECONDS)
+				.pollingEvery(1, TimeUnit.SECONDS)
+				.ignoring(NoSuchElementException.class);
 
-		WebElement optionListElement = wait.until(new Function<WebDriver, WebElement>() {
-			public WebElement apply(WebDriver driver) {
-				return driver.findElement(By.cssSelector("#ui-id-1"));
-			}
-		});
+		WebElement optionListElement = wait
+				.until(new Function<WebDriver, WebElement>() {
+					public WebElement apply(WebDriver driver) {
+						return driver.findElement(By.cssSelector("#ui-id-1"));
+					}
+				});
 
 		// select the first item from the auto complete list
-		List<WebElement> originOptions = optionListElement.findElements(By.tagName("li"));	
+		List<WebElement> originOptions = optionListElement.findElements(By
+				.tagName("li"));
 		originOptions.get(0).click();
 	}
 
 	public void selectTheFirstAvailableAutoCompleteOptionFromDestination() {
 		@SuppressWarnings("deprecation")
-		Wait<WebDriver> wait = new FluentWait<WebDriver>(DriverUtil.getDriver()).withTimeout(30, TimeUnit.SECONDS)
-				.pollingEvery(1, TimeUnit.SECONDS).ignoring(NoSuchElementException.class);
+		Wait<WebDriver> wait = new FluentWait<WebDriver>(DriverUtil.getDriver())
+				.withTimeout(30, TimeUnit.SECONDS)
+				.pollingEvery(1, TimeUnit.SECONDS)
+				.ignoring(NoSuchElementException.class);
 
-		WebElement optionListElement = wait.until(new Function<WebDriver, WebElement>() {
-			public WebElement apply(WebDriver driver) {
-				return driver.findElement(By.cssSelector("#ui-id-2"));
-			}
-		});
+		WebElement optionListElement = wait
+				.until(new Function<WebDriver, WebElement>() {
+					public WebElement apply(WebDriver driver) {
+						return driver.findElement(By.cssSelector("#ui-id-2"));
+					}
+				});
 
 		// select the first item from the auto complete list
 		WebElement originOptionsElement = optionListElement;
-		List<WebElement> originOptions = originOptionsElement.findElements(By.tagName("li"));
+		List<WebElement> originOptions = originOptionsElement.findElements(By
+				.tagName("li"));
 		originOptions.get(0).click();
 	}
 

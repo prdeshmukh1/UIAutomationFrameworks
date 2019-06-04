@@ -15,11 +15,12 @@ import gherkin.formatter.Reporter;
 
 public class SearchFlightsResults {
 	
-	FlightSearchResultsPageLocators flightSearchResultsPageLoc=null;
+	FlightSearchResultsPageLocators flightSearchResultsPageLoc;
 	
 	public  SearchFlightsResults()
 	{
-		flightSearchResultsPageLoc=new FlightSearchResultsPageLocators();
+//		System.out.println("Inside Constructor SearchFlightsResults() ");
+		this.flightSearchResultsPageLoc=new FlightSearchResultsPageLocators();
 		PageFactory.initElements(DriverUtil.getDriver(), flightSearchResultsPageLoc);
 	}
 	

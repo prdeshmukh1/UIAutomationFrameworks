@@ -1,7 +1,5 @@
 package com.cleartrip.ui;
 
-import com.cleartrip.ui.utls.DriverUtil;
-
 import cucumber.api.java.Before;
 
 public class BeforeActions {
@@ -11,6 +9,6 @@ public class BeforeActions {
 		// ExtentCucumberFormatter.initiateExtentCucumberFormatter();
 		System.out.println("========================== Before =========================================");
 
-		DriverUtil.getDriver();
+//		DriverUtil.getDriver();
 	}
 }

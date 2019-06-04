@@ -8,6 +8,7 @@ public class BaseTest
 {
 	protected WebDriver driver;
 	public BaseTest(){
+		System.out.println("Inside BaseTest Class...");
 		this.driver = DriverUtil.getDriver();
 	}
 }
